@@ -7,5 +7,4 @@ To create own widget class start class Name with UpperCase: -
 Build method must return a widget.
 @override notation shows that in the end we are going to override a method of a widget.
 
-"const" helps dart optimize runtime performance, Once your code executes the things
-that are created by your code, the widgets, for example,will be stored in the device memory,but with const when you then use that same widget,that same widget with the same text, a second time in the app that existing memory thing will be reused instead of a second memory object being created.
+"const" helps dart optimize runtime performance, Once your code executes the things that are created by your code, the widgets, for example,will be stored in the device memory,but with const when you then use that same widget,that same widget with the same text, a second time in the app that existing memory thing will be reused instead of a second memory object being created.
