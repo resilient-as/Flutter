@@ -7,23 +7,22 @@ const endAligntment = Alignment.bottomRight;
 class GradientContainer extends StatelessWidget {
   //own widget class
   const GradientContainer(
-      {super.key}); //constructor, You can simply write super dot key here and this will accept a named argument called Key and automatically forward it to the superclass, so to StatelessWidget under that same name, so also under the name key.
+      {super.key, required this.colors}); //constructor, with named argument key
+  //required means that the argument must be provided because it is not optional, in dart named arguments are optional by default
+  final List<Color> colors; //list of colors
   @override
   Widget build(context) {
     //function
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 26, 2, 80),
-            Color(0xd82d0762),
-          ],
+          colors: colors,
           begin: startAligntment,
           end: endAligntment,
         ),
       ),
       child: const Center(
-        child: StyledText(),
+        child: StyledText('INDIA!'),
       ),
     );
   }
