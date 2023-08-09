@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/styled_text.dart';
+//import 'package:hello_world/styled_text.dart';
 
 const startAligntment = Alignment.topLeft;
 const endAligntment = Alignment.bottomRight;
@@ -9,6 +10,12 @@ class GradientContainer extends StatelessWidget {
   const GradientContainer(
       {super.key, required this.colors}); //constructor, with named argument key
   //required means that the argument must be provided because it is not optional, in dart named arguments are optional by default
+  //super.key means that the key argument is passed to the super class constructor
+  //final means that the value of the variable cannot be changed after it is initialized
+  //const means that the value of the variable is known at compile time
+  //const is a compile time constant, final is a runtime constant
+  //const is implicitly final
+  //const is used for values that are known at compile time, final is used for values that are known at runtime  
   final List<Color> colors; //list of colors
   @override
   Widget build(context) {
@@ -21,8 +28,12 @@ class GradientContainer extends StatelessWidget {
           end: endAligntment,
         ),
       ),
-      child: const Center(
-        child: StyledText('INDIA!'),
+      child:  Center(//dyanamic widget so it is not 'const'        
+        child: Column(children: [Image.asset('assets/images/dice-2.png', width: 200, height: 200),
+            TextButton(onPressed: onPressed, child: const Text('Roll Dice', style: TextStyle(fontSize: 30, color: Colors.white))),
+          ],
+        ),
+        //child: StyledText('Hello World!'),
       ),
     );
   }
