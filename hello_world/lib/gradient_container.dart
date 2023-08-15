@@ -17,6 +17,11 @@ class GradientContainer extends StatelessWidget {
   //const is implicitly final
   //const is used for values that are known at compile time, final is used for values that are known at runtime  
   final List<Color> colors; //list of colors
+
+  void rollDice() {
+    //function
+    print('Roll Dice');
+  }
   @override
   Widget build(context) {
     //function
@@ -29,8 +34,18 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child:  Center(//dyanamic widget so it is not 'const'        
-        child: Column(children: [Image.asset('assets/images/dice-2.png', width: 200, height: 200),
-            TextButton(onPressed: onPressed, child: const Text('Roll Dice', style: TextStyle(fontSize: 30, color: Colors.white))),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,//Column is the parent widget, mainAxisSize is the property of the Column widget
+          //mainAxisSize.min means that the Column widget will take up the minimum amount of space in the main axis
+          children: [Image.asset('assets/images/dice-2.png', width: 200, height: 200),//Image Asset
+            TextButton(
+              onPressed: rollDice,
+              style: TextButton.styleFrom(
+              //padding: const EdgeInsets.only(top: 20,),// we can use all also instead of only, all is used to set the same value for all the sides
+              foregroundColor: Colors.white,
+              textStyle: const TextStyle(fontSize: 30)),
+              child: const Text('Roll Dice')
+              )
           ],
         ),
         //child: StyledText('Hello World!'),
