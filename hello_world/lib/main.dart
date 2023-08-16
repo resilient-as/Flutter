@@ -3,9 +3,9 @@ import 'package:hello_world/gradient_container.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
-        body: GradientContainer(colors: [Colors.orange,Colors.white, Colors.green]),
+        body: GradientContainer(colors: const [Colors.orange, Colors.white, Colors.green]),
       ),
     ),
   );
