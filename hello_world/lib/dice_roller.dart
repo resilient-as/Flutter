@@ -9,9 +9,9 @@ class DiceRoller extends StatefulWidget {//we will not add build because its a s
 class _DiceRollerState extends State<DiceRoller> {
     var activeDiceImage = 'assets/images/dice-2.png';
     void rollDice() {
-    //function
-    activeDiceImage = 'assets/images/dice-1.png';
-    
+    setState(() {
+      activeDiceImage = 'assets/images/dice-1.png';
+    });        
   }
 
   @override
@@ -28,7 +28,7 @@ class _DiceRollerState extends State<DiceRoller> {
                 style: TextButton.styleFrom(
                     // padding: const EdgeInsets.only(
                     //   top: 20,),// we can use all also instead of only, all is used to set the same value for all the sides
-                    foregroundColor: const Color.fromARGB(255, 223, 16, 16),
+                    foregroundColor: Color.fromARGB(255, 5, 0, 248),
                     textStyle: const TextStyle(fontSize: 30)),
                 child: const Text('Roll Dice'))
           ],
