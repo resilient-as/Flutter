@@ -15,3 +15,5 @@ Flutter has three types of buttons: - OutlinedButton, TextButton, ElevatedButton
 OutlinedButton is a button with a border outline.
 TextButton is a button with text.
 ElevatedButton is a button with a filled background color.
+StatelessWidget is a widget that cannot change its state during the runtime of our app. Only update the screen if parent widget changes.
+StatefulWidget is a widget that can change its state during the runtime of our app. When state changes, the Widget is re-rendered.
