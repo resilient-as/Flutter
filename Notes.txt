@@ -17,3 +17,5 @@ TextButton is a button with text.
 ElevatedButton is a button with a filled background color.
 StatelessWidget is a widget that cannot change its state during the runtime of our app. Only update the screen if parent widget changes.
 StatefulWidget is a widget that can change its state during the runtime of our app. When state changes, the Widget is re-rendered.
+Custom widgets are created by extending either StatelessWidget or StatefulWidget.
+Custom widgets is made by using class keyword and the name of the class must start with UpperCase, and if the name is made up of multiple words then the first letter of each word must be in UpperCase.
